@@ -1,13 +1,29 @@
 # voltdash-apks
 
-APKs de terceiros oferecidos na tela **Instalar Apps** do VoltDash.
+Arquivos servidos ao VoltDash pela URL raw do GitHub.
 
-O catalogo em si fica em `voltdash-dist/apps.json`; aqui ficam so os arquivos.
+O catalogo dos APKs fica em `voltdash-dist/apps.json`; aqui ficam so os arquivos.
+
+## APKs (tela Instalar Apps)
 
 | Arquivo | App | Versao | Pacote |
 |---|---|---|---|
 | `waze.apk` | Waze | 4.81.0.4 | `com.waze` |
 | `revanced-manager.apk` | ReVanced Manager | 3.0.36 | `com.revanced.net.revancedmanager` |
+
+## Arquivos de instalacao (exploit Frida)
+
+Usados pelos scripts de instalacao manual por telnet, para nao depender de
+servidor de terceiro. Espelho proprio dos binarios do exploit.
+
+| Arquivo | O que e |
+|---|---|
+| `fridaserver.rar` | Servidor Frida (binario ELF ARM aarch64, apesar da extensao `.rar`) |
+| `fridainject.rar` | Injetor Frida (binario ELF ARM aarch64) |
+| `system_server.js` | Hook injetado no `system_server` |
+
+> A extensao `.rar` e mantida so por compatibilidade com os scripts antigos —
+> os dois primeiros sao executaveis ELF, nao arquivos RAR.
 
 ## Como atualizar
 
